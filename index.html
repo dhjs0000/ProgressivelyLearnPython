@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循序渐进学Python</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>循序渐进学Python</h1>
+            <div class="server-notice">
+                <strong>注意:</strong> 由于浏览器安全限制，请使用本地服务器运行此页面，否则无法加载教程内容。
+                <a href="#" id="show-instructions">查看详细说明</a>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>目录</h2>
+                <ul id="directory"></ul>
+            </nav>
+            
+            <main class="content">
+                <div id="markdown-content">
+                    <div class="welcome">
+                        <h2>欢迎学习Python</h2>
+                        <p>请从左侧目录选择一个教程开始学习。</p>
+                        <div id="setup-instructions" style="text-align: left; margin-top: 30px; display: none;">
+                            <h3>如何使用本地服务器访问</h3>
+                            <p>由于浏览器安全限制，直接打开HTML文件无法加载教程内容。您可以通过以下方式运行本地服务器：</p>
+                            <h4>方法1：使用VS Code的Live Server扩展</h4>
+                            <ol>
+                                <li>在VS Code中安装"Live Server"扩展</li>
+                                <li>右键点击index.html文件，选择"Open with Live Server"</li>
+                            </ol>
+                            <h4>方法2：使用Python内置的HTTP服务器</h4>
+                            <ol>
+                                <li>打开命令提示符或终端</li>
+                                <li>导航到项目根目录（包含index.html的目录）</li>
+                                <li>运行命令：<code>python -m http.server</code>（Python 3）</li>
+                                <li>在浏览器中访问 <code>http://localhost:8000</code></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+        <footer>
+            <p>循序渐进学Python © 2023</p>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('show-instructions').addEventListener('click', function(e) {
+            e.preventDefault();
+            const instructions = document.getElementById('setup-instructions');
+            instructions.style.display = instructions.style.display === 'none' ? 'block' : 'none';
+            this.textContent = instructions.style.display === 'none' ? '查看详细说明' : '隐藏详细说明';
+        });
+    </script>
+</body>
+</html> 
