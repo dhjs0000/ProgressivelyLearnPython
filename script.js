@@ -25,6 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         { name: '0.2.3 数据类型——认识不同的货物', type: 'file', path: '0级/0.2 第一个程序/0.2.3 数据类型——认识不同的货物.md' },
                         { name: '0.2.4 输入输出——与程序对话', type: 'file', path: '0级/0.2 第一个程序/0.2.4 输入输出——与程序对话.md' }
                     ]
+                },
+                {
+                    name: '0.3 数据类型详解',
+                    type: 'folder',
+                    children: [
+                        { name: '0.3.1 字符串', type: 'file', path: '0级/0.3 数据类型详解/0.3.1 字符串.md' }
+                    ]
                 }
             ]
         }
